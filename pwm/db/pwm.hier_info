@@ -1,0 +1,13 @@
+|pwm
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+x[0] => LessThan0.IN3
+x[1] => LessThan0.IN2
+x[2] => LessThan0.IN1
+y <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
