@@ -1,0 +1,55 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity stepper_motor is
+    Port ( clk           : in STD_LOGIC;
+           rst           : in STD_LOGIC;
+           alguma_entrada: in STD_LOGIC;
+           A             : out STD_LOGIC;
+           B             : out STD_LOGIC;
+           C             : out STD_LOGIC;
+           D             : out STD_LOGIC);
+end stepper_motor;
+
+architecture Behavioral of stepper_motor is
+    type state_type is (A_STATE, B_STATE, C_STATE, D_STATE);
+    signal current_state, next_state: state_type;
+begin
+
+    -- Processo de transição de estado
+    process(clk, rst)
+    begin
+        if rst = '1' then
+            current_state <= A_STATE;
+        elsif rising_edge(clk) and alguma_entrada = '1' then
+            current_state <= next_state;
+        end if;
+    end process;
+
+    -- Processo de lógica da máquina de estados
+    process(current_state)
+    begin
+        case current_state is
+            when A_STATE =>
+                A <= '1'; B <= '0'; C <= '0'; D <= '0';
+                next_state <= B_STATE;
+                
+            when B_STATE =>
+                A <= '0'; B <= '1'; C <= '0'; D <= '0';
+                next_state <= C_STATE;
+                
+            when C_STATE =>
+                A <= '0'; B <= '0'; C <= '1'; D <= '0';
+                next_state <= D_STATE;
+                
+            when D_STATE =>
+                A <= '0'; B <= '0'; C <= '0'; D <= '1';
+                next_state <= A_STATE;
+                
+            when others =>
+                A <= '0'; B <= '0'; C <= '0'; D <= '0';
+                next_state <= A_STATE;
+        end case;
+    end process;
+
+end Behavioral;

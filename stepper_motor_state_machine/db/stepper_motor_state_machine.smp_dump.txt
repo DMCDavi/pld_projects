@@ -1,0 +1,7 @@
+
+State Machine - |stepper_motor_state_machine|current_state
+Name current_state.sD current_state.sC current_state.sB current_state.sA 
+current_state.sA 0 0 0 0 
+current_state.sB 0 0 1 1 
+current_state.sC 0 1 0 1 
+current_state.sD 1 0 0 1 
