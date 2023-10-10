@@ -1,0 +1,18 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY revisao_b IS
+	PORT(
+		a, b, c: IN STD_LOGIC;
+		d, e: OUT STD_LOGIC;
+	);
+END revisao_b;
+
+ARCHITECTURE arch OF revisao_b IS
+BEGIN
+	processo: PROCESS(a, b, c)
+	BEGIN
+		e <= (a XOR b) XOR c;
+		d <= ((NOT a) AND b) OR ((NOT a) AND c) OR (b AND c)
+	END PROCESS processo;
+END;

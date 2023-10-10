@@ -1,0 +1,14 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY nand_a_b IS
+	PORT(a, b: IN BIT; c: OUT BIT
+	);
+END nand_a_b;
+
+ARCHITECTURE archi OF nand_a_b IS
+BEGIN
+
+c <= a nand b;
+
+END archi;

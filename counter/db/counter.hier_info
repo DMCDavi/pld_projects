@@ -1,0 +1,15 @@
+|counter
+clk => digit[0]~reg0.CLK
+clk => digit[1]~reg0.CLK
+clk => digit[2]~reg0.CLK
+clk => digit[3]~reg0.CLK
+clk => \count:temp[0].CLK
+clk => \count:temp[1].CLK
+clk => \count:temp[2].CLK
+clk => \count:temp[3].CLK
+digit[0] <= digit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[1] <= digit[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[2] <= digit[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[3] <= digit[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

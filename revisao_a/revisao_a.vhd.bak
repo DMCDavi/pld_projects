@@ -1,0 +1,12 @@
+LIBRARY ieee;
+USE std_logic.all;
+
+ENTITY revisao_a IS
+	PORT(a, b, c: IN BIT; d, e, f: OUT BIT
+	);
+END revisao_a;
+
+ARCHITECTURE arch OF revisao_a IS
+BEGIN
+
+END arch;

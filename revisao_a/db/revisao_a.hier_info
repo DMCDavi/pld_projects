@@ -1,0 +1,19 @@
+|revisao_a
+a => d.IN0
+b => d.IN1
+b => e.IN1
+b => f.IN0
+b => nand_x_y:u1.x
+c => f.IN1
+c => nand_x_y:u1.y
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|revisao_a|nand_x_y:u1
+x => s.IN0
+y => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

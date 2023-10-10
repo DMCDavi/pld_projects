@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity comparador is
+    Port(a, b: in std_logic; s: out std_logic);
+end comparador;
+
+architecture behavior of comparador is
+begin
+    s <= a AND b;
+end behavior;

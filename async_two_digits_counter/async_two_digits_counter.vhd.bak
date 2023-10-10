@@ -1,0 +1,46 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY counter IS 
+	port (clk: IN STD_LOGIC;
+			decimal: OUT INTEGER RANGE 0 to 9;
+			unity: OUT INTEGER RANGE 0 to 9;
+			btn_logic: IN std_logic;
+			btn_finish: IN STD_LOGIC);
+END counter;
+
+ARCHITECTURE counter1 OF counter IS
+BEGIN
+	process
+		VARIABLE temp : INTEGER RANGE 0 TO 99;
+		VARIABLE aux : integer range 0 to 1;
+		VARIABLE opt : integer range 0 to 1;
+		VARIABLE div : integer range 0 to 1023;
+	BEGIN
+		
+		IF(btn_finish='1') then
+			temp := 0;
+		END if;
+		
+		if(btn_logic='1' and aux=0) then
+			aux := 1;
+			opt := (opt + 1) mod 2;
+		end if;
+		if(btn_logic='0' and aux=1) then
+			aux:=0;
+			
+		end if;
+		wait until (clk'EVENT AND clk='1');
+		if(div = 0) then
+			if(opt = 0) then
+				temp := temp + 1;
+			ELSE 
+				temp := (temp - 1);
+			end if;
+			temp := temp mod 100;
+		end if;
+		div := (div+1) mod 1024;
+		decimal <= 9;
+		unity <= temp mod 10;
+	END PROCESS;
+END counter1;
