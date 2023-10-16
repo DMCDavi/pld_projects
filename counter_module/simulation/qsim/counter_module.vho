@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
--- DATE "10/10/2023 19:26:09"
+-- DATE "10/16/2023 20:53:40"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -61,13 +61,25 @@ SIGNAL \count[0]~output_o\ : std_logic;
 SIGNAL \count[1]~output_o\ : std_logic;
 SIGNAL \count[2]~output_o\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
-SIGNAL \tmp_count[0]~2_combout\ : std_logic;
+SIGNAL \current_state.STATE_1~0_combout\ : std_logic;
 SIGNAL \rst~input_o\ : std_logic;
-SIGNAL \tmp_count~1_combout\ : std_logic;
-SIGNAL \tmp_count~0_combout\ : std_logic;
-SIGNAL tmp_count : std_logic_vector(2 DOWNTO 0);
+SIGNAL \current_state.STATE_1~q\ : std_logic;
+SIGNAL \current_state.STATE_2~q\ : std_logic;
+SIGNAL \current_state.STATE_3~q\ : std_logic;
+SIGNAL \current_state.STATE_4~q\ : std_logic;
+SIGNAL \current_state.STATE_5~q\ : std_logic;
+SIGNAL \current_state.STATE_0~0_combout\ : std_logic;
+SIGNAL \current_state.STATE_0~q\ : std_logic;
+SIGNAL \WideOr0~combout\ : std_logic;
+SIGNAL \count~4_combout\ : std_logic;
+SIGNAL \count~5_combout\ : std_logic;
 SIGNAL \ALT_INV_rst~input_o\ : std_logic;
-SIGNAL ALT_INV_tmp_count : std_logic_vector(2 DOWNTO 0);
+SIGNAL \ALT_INV_current_state.STATE_5~q\ : std_logic;
+SIGNAL \ALT_INV_current_state.STATE_3~q\ : std_logic;
+SIGNAL \ALT_INV_WideOr0~combout\ : std_logic;
+SIGNAL \ALT_INV_current_state.STATE_4~q\ : std_logic;
+SIGNAL \ALT_INV_current_state.STATE_2~q\ : std_logic;
+SIGNAL \ALT_INV_current_state.STATE_0~q\ : std_logic;
 
 BEGIN
 
@@ -78,9 +90,12 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 \ALT_INV_rst~input_o\ <= NOT \rst~input_o\;
-ALT_INV_tmp_count(2) <= NOT tmp_count(2);
-ALT_INV_tmp_count(1) <= NOT tmp_count(1);
-ALT_INV_tmp_count(0) <= NOT tmp_count(0);
+\ALT_INV_current_state.STATE_5~q\ <= NOT \current_state.STATE_5~q\;
+\ALT_INV_current_state.STATE_3~q\ <= NOT \current_state.STATE_3~q\;
+\ALT_INV_WideOr0~combout\ <= NOT \WideOr0~combout\;
+\ALT_INV_current_state.STATE_4~q\ <= NOT \current_state.STATE_4~q\;
+\ALT_INV_current_state.STATE_2~q\ <= NOT \current_state.STATE_2~q\;
+\ALT_INV_current_state.STATE_0~q\ <= NOT \current_state.STATE_0~q\;
 
 \count[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
@@ -90,7 +105,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => tmp_count(0),
+	i => \ALT_INV_WideOr0~combout\,
 	devoe => ww_devoe,
 	o => \count[0]~output_o\);
 
@@ -102,7 +117,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => tmp_count(1),
+	i => \count~4_combout\,
 	devoe => ww_devoe,
 	o => \count[1]~output_o\);
 
@@ -114,7 +129,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => tmp_count(2),
+	i => \count~5_combout\,
 	devoe => ww_devoe,
 	o => \count[2]~output_o\);
 
@@ -128,9 +143,9 @@ PORT MAP (
 	i => ww_clk,
 	o => \clk~input_o\);
 
-\tmp_count[0]~2\ : cyclonev_lcell_comb
+\current_state.STATE_1~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \tmp_count[0]~2_combout\ = !tmp_count(0)
+-- \current_state.STATE_1~0_combout\ = !\current_state.STATE_0~q\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -139,8 +154,8 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => ALT_INV_tmp_count(0),
-	combout => \tmp_count[0]~2_combout\);
+	dataa => \ALT_INV_current_state.STATE_0~q\,
+	combout => \current_state.STATE_1~0_combout\);
 
 \rst~input\ : cyclonev_io_ibuf
 -- pragma translate_off
@@ -152,7 +167,7 @@ PORT MAP (
 	i => ww_rst,
 	o => \rst~input_o\);
 
-\tmp_count[0]\ : dffeas
+\current_state.STATE_1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -160,29 +175,83 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \tmp_count[0]~2_combout\,
+	d => \current_state.STATE_1~0_combout\,
 	clrn => \ALT_INV_rst~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => tmp_count(0));
+	q => \current_state.STATE_1~q\);
 
-\tmp_count~1\ : cyclonev_lcell_comb
+\current_state.STATE_2\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~input_o\,
+	d => \current_state.STATE_1~q\,
+	clrn => \ALT_INV_rst~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.STATE_2~q\);
+
+\current_state.STATE_3\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~input_o\,
+	d => \current_state.STATE_2~q\,
+	clrn => \ALT_INV_rst~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.STATE_3~q\);
+
+\current_state.STATE_4\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~input_o\,
+	d => \current_state.STATE_3~q\,
+	clrn => \ALT_INV_rst~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.STATE_4~q\);
+
+\current_state.STATE_5\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~input_o\,
+	d => \current_state.STATE_4~q\,
+	clrn => \ALT_INV_rst~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \current_state.STATE_5~q\);
+
+\current_state.STATE_0~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \tmp_count~1_combout\ = (!tmp_count(0) & ((tmp_count(2)))) # (tmp_count(0) & (tmp_count(1) & !tmp_count(2)))
+-- \current_state.STATE_0~0_combout\ = !\current_state.STATE_5~q\
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0001101000011010000110100001101000011010000110100001101000011010",
+	lut_mask => "1010101010101010101010101010101010101010101010101010101010101010",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => ALT_INV_tmp_count(0),
-	datab => ALT_INV_tmp_count(1),
-	datac => ALT_INV_tmp_count(2),
-	combout => \tmp_count~1_combout\);
+	dataa => \ALT_INV_current_state.STATE_5~q\,
+	combout => \current_state.STATE_0~0_combout\);
 
-\tmp_count[2]\ : dffeas
+\current_state.STATE_0\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -190,41 +259,57 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	d => \tmp_count~1_combout\,
+	d => \current_state.STATE_0~0_combout\,
 	clrn => \ALT_INV_rst~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => tmp_count(2));
+	q => \current_state.STATE_0~q\);
 
-\tmp_count~0\ : cyclonev_lcell_comb
+WideOr0 : cyclonev_lcell_comb
 -- Equation(s):
--- \tmp_count~0_combout\ = (!tmp_count(0) & (tmp_count(1))) # (tmp_count(0) & (!tmp_count(1) & !tmp_count(2)))
+-- \WideOr0~combout\ = (!\current_state.STATE_0~q\) # ((\current_state.STATE_4~q\) # (\current_state.STATE_2~q\))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0110001001100010011000100110001001100010011000100110001001100010",
+	lut_mask => "1011111110111111101111111011111110111111101111111011111110111111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => ALT_INV_tmp_count(0),
-	datab => ALT_INV_tmp_count(1),
-	datac => ALT_INV_tmp_count(2),
-	combout => \tmp_count~0_combout\);
+	dataa => \ALT_INV_current_state.STATE_0~q\,
+	datab => \ALT_INV_current_state.STATE_2~q\,
+	datac => \ALT_INV_current_state.STATE_4~q\,
+	combout => \WideOr0~combout\);
 
-\tmp_count[1]\ : dffeas
+\count~4\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \count~4_combout\ = (\current_state.STATE_3~q\) # (\current_state.STATE_2~q\)
+
 -- pragma translate_off
 GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
+	extended_lut => "off",
+	lut_mask => "0111011101110111011101110111011101110111011101110111011101110111",
+	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	clk => \clk~input_o\,
-	d => \tmp_count~0_combout\,
-	clrn => \ALT_INV_rst~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => tmp_count(1));
+	dataa => \ALT_INV_current_state.STATE_2~q\,
+	datab => \ALT_INV_current_state.STATE_3~q\,
+	combout => \count~4_combout\);
+
+\count~5\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \count~5_combout\ = (\current_state.STATE_5~q\) # (\current_state.STATE_4~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0111011101110111011101110111011101110111011101110111011101110111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ALT_INV_current_state.STATE_4~q\,
+	datab => \ALT_INV_current_state.STATE_5~q\,
+	combout => \count~5_combout\);
 
 ww_count(0) <= \count[0]~output_o\;
 

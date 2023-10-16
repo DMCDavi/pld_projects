@@ -1,12 +1,8 @@
 |counter_module
-clk => tmp_count[0].CLK
-clk => tmp_count[1].CLK
-clk => tmp_count[2].CLK
-rst => tmp_count[0].ACLR
-rst => tmp_count[1].ACLR
-rst => tmp_count[2].ACLR
-count[0] <= tmp_count[0].DB_MAX_OUTPUT_PORT_TYPE
-count[1] <= tmp_count[1].DB_MAX_OUTPUT_PORT_TYPE
-count[2] <= tmp_count[2].DB_MAX_OUTPUT_PORT_TYPE
+clk => current_state~1.DATAIN
+rst => current_state~3.DATAIN
+count[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count.DB_MAX_OUTPUT_PORT_TYPE
 
 

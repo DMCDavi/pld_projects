@@ -1,0 +1,9 @@
+
+State Machine - |counter_module|current_state
+Name current_state.STATE_5 current_state.STATE_4 current_state.STATE_3 current_state.STATE_2 current_state.STATE_1 current_state.STATE_0 
+current_state.STATE_0 0 0 0 0 0 0 
+current_state.STATE_1 0 0 0 0 1 1 
+current_state.STATE_2 0 0 0 1 0 1 
+current_state.STATE_3 0 0 1 0 0 1 
+current_state.STATE_4 0 1 0 0 0 1 
+current_state.STATE_5 1 0 0 0 0 1 
