@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity stepper_motor_state_machine is
     Port ( clk     : in  STD_LOGIC;
            rst     : in  STD_LOGIC;
-           dir     : in  STD_LOGIC;  -- 0: horario, 1: anti-horario
+           dir_btn : in  STD_LOGIC;  -- 0: horario, 1: anti-horario
            A       : out STD_LOGIC;
            B       : out STD_LOGIC;
            C       : out STD_LOGIC;
@@ -16,6 +16,7 @@ end stepper_motor_state_machine;
 architecture behavioral of stepper_motor_state_machine is
 type state_type is (sA, sB, sC, sD);
 signal current_state, next_state: state_type;
+signal dir: std_logic;
 begin
 
 process(clk, rst)
@@ -24,6 +25,13 @@ begin
         current_state <= sA;
     elsif rising_edge(clk) then
         current_state <= next_state;
+    end if;
+end process;
+
+process(dir_btn)
+begin
+    if rising_edge(dir_btn) then
+        dir <= not dir;
     end if;
 end process;
 

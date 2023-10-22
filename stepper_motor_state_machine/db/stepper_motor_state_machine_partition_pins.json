@@ -20,15 +20,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "dir",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "dir_btn",
 					"strict" : false
 				}
 			]

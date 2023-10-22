@@ -1,5 +1,5 @@
 EDA Netlist Writer report for stepper_motor_state_machine
-Tue Oct 10 20:19:53 2023
+Tue Oct 17 20:49:34 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Oct 10 20:19:53 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Oct 17 20:49:34 2023 ;
 ; Revision Name             ; stepper_motor_state_machine           ;
 ; Top-level Entity Name     ; stepper_motor_state_machine           ;
 ; Family                    ; Cyclone V                             ;
@@ -95,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 10 20:19:52 2023
+    Info: Processing started: Tue Oct 17 20:49:33 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/ stepper_motor_state_machine -c stepper_motor_state_machine
 Info (119006): Selected device 5CEBA4F23C7 for design "stepper_motor_state_machine"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file stepper_motor_state_machine.vho in folder "C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Tue Oct 10 20:19:53 2023
+    Info: Processing ended: Tue Oct 17 20:49:34 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

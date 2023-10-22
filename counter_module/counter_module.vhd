@@ -14,7 +14,6 @@ architecture Behavioral of counter_module is
     signal current_state, next_state : state_type;
 
 begin
-    -- Processo da máquina de estado
     process(clk, rst)
     begin
         if rst = '1' then
@@ -29,40 +28,26 @@ begin
     begin
         case current_state is
             when STATE_0 =>
+					 count <= "000";
                 next_state <= STATE_1;
             when STATE_1 =>
+					 count <= "001";
                 next_state <= STATE_2;
             when STATE_2 =>
+					 count <= "010";
                 next_state <= STATE_3;
             when STATE_3 =>
+					 count <= "011";
                 next_state <= STATE_4;
             when STATE_4 =>
+					 count <= "100";
                 next_state <= STATE_5;
             when STATE_5 =>
+					 count <= "101";
                 next_state <= STATE_0;
             when others =>
+					 count <= "000";
                 next_state <= STATE_0;
-        end case;
-    end process;
-
-    -- Lógica de saída
-    process(current_state)
-    begin
-        case current_state is
-            when STATE_0 =>
-                count <= "000";
-            when STATE_1 =>
-                count <= "001";
-            when STATE_2 =>
-                count <= "010";
-            when STATE_3 =>
-                count <= "011";
-            when STATE_4 =>
-                count <= "100";
-            when STATE_5 =>
-                count <= "101";
-            when others =>
-                count <= "000";
         end case;
     end process;
 
