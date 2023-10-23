@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/22.1std/projects/pwm/simulation/qsim
 Epwm
-Z1 w1696981647
+Z1 w1698104811
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -24,13 +24,13 @@ Z11 8pwm.vho
 Z12 Fpwm.vho
 l0
 L39
-V5YnJXjh<GJ:6OBJ9C4J:H3
-!s100 b1XaI>zZEH;F2:D:=zX9g0
+VDW6^?cEA9hoKW6WzOoW[N0
+!s100 X[T@F0=HUQMG`Z[YcV9M10
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1696981648
+Z14 !s110 1698104812
 !i10b 1
-Z15 !s108 1696981648.000000
+Z15 !s108 1698104812.000000
 Z16 !s90 -work|work|pwm.vho|
 Z17 !s107 pwm.vho|
 !i113 1
@@ -46,11 +46,11 @@ R7
 R8
 R9
 R10
-DEx4 work 3 pwm 0 22 5YnJXjh<GJ:6OBJ9C4J:H3
-l79
+DEx4 work 3 pwm 0 22 DW6^?cEA9hoKW6WzOoW[N0
+l97
 L48
-VG2=Vd1;znWVONSIe9P5[>2
-!s100 jIO]HBzO_P95hMPN5`;[V2
+V;0o@b<dZdPHkzW959:AED0
+!s100 Fk23GhSL_[2P7CCY=kVH:0
 R13
 32
 R14
@@ -66,8 +66,8 @@ R1
 R8
 R9
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z20 8Waveform1.vwf.vht
+Z21 FWaveform1.vwf.vht
 l0
 L32
 Vzl8MCDgW4ZHEQ>DfNSULC1
@@ -77,8 +77,8 @@ R13
 R14
 !i10b 1
 R15
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+Z22 !s90 -work|work|Waveform1.vwf.vht|
+Z23 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
@@ -88,8 +88,8 @@ R9
 Z24 DEx4 work 15 pwm_vhd_vec_tst 0 22 zl8MCDgW4ZHEQ>DfNSULC1
 l49
 L34
-VWLI8UPVW9_a4o4]:Be;e73
-!s100 J?0Yc@b2@eQ`g]aM`6NbJ0
+Vzg6de`?Blb6QG;5WkL>eK0
+!s100 [U8nT]lDm0Ff4K?bCl2`K3
 R13
 32
 R14
