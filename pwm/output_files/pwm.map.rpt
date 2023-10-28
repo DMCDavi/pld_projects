@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwm
-Mon Oct 23 20:43:12 2023
+Sat Oct 28 18:05:14 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 23 20:43:12 2023          ;
+; Analysis & Synthesis Status     ; Successful - Sat Oct 28 18:05:14 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; pwm                                            ;
 ; Top-level Entity Name           ; pwm                                            ;
@@ -238,9 +238,9 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 7     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -251,7 +251,8 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 8                           ;
-;     CLR               ; 8                           ;
+;     CLR               ; 1                           ;
+;     ENA               ; 7                           ;
 ; arriav_lcell_comb     ; 6                           ;
 ;     normal            ; 6                           ;
 ;         1 data inputs ; 2                           ;
@@ -280,13 +281,16 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Oct 23 20:43:03 2023
+    Info: Processing started: Sat Oct 28 18:05:05 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwm -c pwm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pwm.vhd
     Info (12022): Found design unit 1: pwm-behavioral File: C:/intelFPGA_lite/22.1std/projects/pwm/pwm.vhd Line: 12
     Info (12023): Found entity 1: pwm File: C:/intelFPGA_lite/22.1std/projects/pwm/pwm.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file frequency_divider.vhd
+    Info (12022): Found design unit 1: frequency_divider-behavior File: C:/intelFPGA_lite/22.1std/projects/pwm/frequency_divider.vhd Line: 11
+    Info (12023): Found entity 1: frequency_divider File: C:/intelFPGA_lite/22.1std/projects/pwm/frequency_divider.vhd Line: 4
 Info (12127): Elaborating entity "pwm" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -296,8 +300,8 @@ Info (21057): Implemented 17 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 11 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Mon Oct 23 20:43:12 2023
+    Info: Peak virtual memory: 4887 megabytes
+    Info: Processing ended: Sat Oct 28 18:05:14 2023
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:13
 
