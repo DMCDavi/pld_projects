@@ -1,5 +1,5 @@
 Analysis & Synthesis report for counter_module
-Tue Oct 17 20:55:25 2023
+Sat Oct 28 16:43:41 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -44,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 17 20:55:24 2023          ;
+; Analysis & Synthesis Status     ; Successful - Sat Oct 28 16:43:41 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; counter_module                                 ;
 ; Top-level Entity Name           ; counter_module                                 ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 6                                              ;
-; Total pins                      ; 5                                              ;
+; Total registers                 ; 33                                             ;
+; Total pins                      ; 9                                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -168,13 +168,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; counter_module.vhd               ; yes             ; User VHDL File  ; C:/intelFPGA_lite/22.1std/projects/counter_module/counter_module.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; counter_module.vhd               ; yes             ; User VHDL File  ; C:/intelFPGA_lite/22.1std/projects/counter_module/counter_module.vhd    ;         ;
+; frequency_divider.vhd            ; yes             ; User VHDL File  ; C:/intelFPGA_lite/22.1std/projects/counter_module/frequency_divider.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -182,35 +183,36 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 4         ;
+; Estimate of Logic utilization (ALMs needed) ; 24        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 5         ;
+; Combinational ALUT usage for logic          ; 41        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 5         ;
+;     -- 6 input functions                    ; 5         ;
+;     -- 5 input functions                    ; 3         ;
+;     -- 4 input functions                    ; 4         ;
+;     -- <=3 input functions                  ; 29        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 6         ;
+; Dedicated logic registers                   ; 33        ;
 ;                                             ;           ;
-; I/O pins                                    ; 5         ;
+; I/O pins                                    ; 9         ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 6         ;
-; Total fan-out                               ; 35        ;
-; Average fan-out                             ; 1.67      ;
+; Maximum fan-out                             ; 27        ;
+; Total fan-out                               ; 230       ;
+; Average fan-out                             ; 2.50      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; |counter_module            ; 5 (5)               ; 6 (6)                     ; 0                 ; 0          ; 5    ; 0            ; |counter_module     ; counter_module ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
+; |counter_module            ; 41 (8)              ; 33 (6)                    ; 0                 ; 0          ; 9    ; 0            ; |counter_module                      ; counter_module    ; work         ;
+;    |frequency_divider:f1|  ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |counter_module|frequency_divider:f1 ; frequency_divider ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -234,8 +236,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 6     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 33    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -249,17 +251,23 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 6                           ;
+; arriav_ff             ; 33                          ;
 ;     CLR               ; 6                           ;
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-; boundary_port         ; 5                           ;
+;     SCLR              ; 26                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 43                          ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 26                          ;
+;     normal            ; 17                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 1                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 5                           ;
+; boundary_port         ; 9                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.14                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -278,25 +286,29 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 17 20:55:12 2023
+    Info: Processing started: Sat Oct 28 16:43:32 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter_module -c counter_module
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file counter_module.vhd
     Info (12022): Found design unit 1: counter_module-Behavioral File: C:/intelFPGA_lite/22.1std/projects/counter_module/counter_module.vhd Line: 10
     Info (12023): Found entity 1: counter_module File: C:/intelFPGA_lite/22.1std/projects/counter_module/counter_module.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file frequency_divider.vhd
+    Info (12022): Found design unit 1: frequency_divider-behavior File: C:/intelFPGA_lite/22.1std/projects/counter_module/frequency_divider.vhd Line: 11
+    Info (12023): Found entity 1: frequency_divider File: C:/intelFPGA_lite/22.1std/projects/counter_module/frequency_divider.vhd Line: 4
 Info (12127): Elaborating entity "counter_module" for the top level hierarchy
+Info (12128): Elaborating entity "frequency_divider" for hierarchy "frequency_divider:f1" File: C:/intelFPGA_lite/22.1std/projects/counter_module/counter_module.vhd Line: 74
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 14 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 9 logic cells
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 45 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Tue Oct 17 20:55:25 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4900 megabytes
+    Info: Processing ended: Sat Oct 28 16:43:41 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:12
 
 

@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim
 Ecounter_module
-Z1 w1697586963
+Z1 w1698521909
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -24,13 +24,13 @@ Z11 8counter_module.vho
 Z12 Fcounter_module.vho
 l0
 L39
-V0U64bz^loMDBREhSM0FnJ3
-!s100 8V^5NS[^nAZ2Uj4d6j2]K0
+VPLh7mGbnh5YPO:`eE8;^P3
+!s100 hJPGI[^15=`C5Bgda@zPi3
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1697586964
+Z14 !s110 1698521911
 !i10b 1
-Z15 !s108 1697586964.000000
+Z15 !s108 1698521911.000000
 Z16 !s90 -work|work|counter_module.vho|
 Z17 !s107 counter_module.vho|
 !i113 1
@@ -46,11 +46,11 @@ R7
 R8
 R9
 R10
-DEx4 work 14 counter_module 0 22 0U64bz^loMDBREhSM0FnJ3
-l84
+DEx4 work 14 counter_module 0 22 PLh7mGbnh5YPO:`eE8;^P3
+l158
 L47
-VCknG5cSn6a^2lA6mB<:Yg1
-!s100 I0E2G@A]klTfccC8]JfBc0
+VGB]Y9FCIgaV<EH4nYWNzH3
+!s100 n6Mj2jHiMlHJ=3ZN^LcO83
 R13
 32
 R14
@@ -62,12 +62,12 @@ R17
 R18
 R19
 Ecounter_module_vhd_vec_tst
-Z20 w1697586961
+Z20 w1698521908
 R8
 R9
 R0
-Z21 8Waveform3.vwf.vht
-Z22 FWaveform3.vwf.vht
+Z21 8Waveform7.vwf.vht
+Z22 FWaveform7.vwf.vht
 l0
 L32
 VU0DkzWcoYHIZ=]SkRX46h3
@@ -77,8 +77,8 @@ R13
 R14
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform3.vwf.vht|
-Z24 !s107 Waveform3.vwf.vht|
+Z23 !s90 -work|work|Waveform7.vwf.vht|
+Z24 !s107 Waveform7.vwf.vht|
 !i113 1
 R18
 R19
@@ -88,8 +88,8 @@ R9
 Z25 DEx4 work 26 counter_module_vhd_vec_tst 0 22 U0DkzWcoYHIZ=]SkRX46h3
 l47
 L34
-V[eF2<Rb4KKkmQRzN2TNL`1
-!s100 iUjcico?b0d8ZK6?faXjU1
+VWka6ej734H?z6_OWZX@>>0
+!s100 5KO^OoIQFUNLcRdZ0W?GU3
 R13
 32
 R14

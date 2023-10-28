@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Oct 17 20:55:24 2023
+Analysis & Synthesis Status : Successful - Sat Oct 28 16:43:41 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : counter_module
 Top-level Entity Name : counter_module
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 6
-Total pins : 5
+Total registers : 33
+Total pins : 9
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

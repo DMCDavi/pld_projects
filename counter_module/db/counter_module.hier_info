@@ -1,8 +1,43 @@
 |counter_module
-clk => current_state~1.DATAIN
+clk => frequency_divider:f1.clk
 rst => current_state~3.DATAIN
-count[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-count[1] <= count.DB_MAX_OUTPUT_PORT_TYPE
-count[2] <= count.DB_MAX_OUTPUT_PORT_TYPE
+digit[6] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+digit[5] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+digit[4] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+digit[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+digit[2] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+digit[1] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+digit[0] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_module|frequency_divider:f1
+clk => local_out.CLK
+clk => iterations[0].CLK
+clk => iterations[1].CLK
+clk => iterations[2].CLK
+clk => iterations[3].CLK
+clk => iterations[4].CLK
+clk => iterations[5].CLK
+clk => iterations[6].CLK
+clk => iterations[7].CLK
+clk => iterations[8].CLK
+clk => iterations[9].CLK
+clk => iterations[10].CLK
+clk => iterations[11].CLK
+clk => iterations[12].CLK
+clk => iterations[13].CLK
+clk => iterations[14].CLK
+clk => iterations[15].CLK
+clk => iterations[16].CLK
+clk => iterations[17].CLK
+clk => iterations[18].CLK
+clk => iterations[19].CLK
+clk => iterations[20].CLK
+clk => iterations[21].CLK
+clk => iterations[22].CLK
+clk => iterations[23].CLK
+clk => iterations[24].CLK
+clk => iterations[25].CLK
+div_out <= local_out.DB_MAX_OUTPUT_PORT_TYPE
 
 

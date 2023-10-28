@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off counter_module -c counter_module --vector_source="C:/intelFPGA_lite/22.1std/projects/counter_module/Waveform3.vwf" --testbench_file="C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/Waveform3.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off counter_module -c counter_module --vector_source="C:/intelFPGA_lite/22.1std/projects/counter_module/Waveform7.vwf" --testbench_file="C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/Waveform7.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 17 20:56:01 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off counter_module -c counter_module --vector_source=C:/intelFPGA_lite/22.1std/projects/counter_module/Waveform3.vwf --testbench_file=C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/Waveform3.vwf.vht
+    Info: Processing started: Sat Oct 28 16:38:28 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off counter_module -c counter_module --vector_source=C:/intelFPGA_lite/22.1std/projects/counter_module/Waveform7.vwf --testbench_file=C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/Waveform7.vwf.vht
 Info (119006): Selected device 5CEBA4F23C7 for design "counter_module"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -54,15 +54,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 17 20:56:02 2023
+    Info: Processing started: Sat Oct 28 16:38:29 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/ counter_module -c counter_module
 Info (119006): Selected device 5CEBA4F23C7 for design "counter_module"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file counter_module.vho in folder "C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Tue Oct 17 20:56:03 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Oct 28 16:38:29 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -89,7 +89,7 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 20:56:04 on Oct 17,2023
+# Start time: 16:38:31 on Oct 28,2023
 # vcom -work work counter_module.vho 
 
 # -- Loading package STANDARD
@@ -116,15 +116,14 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # -- Compiling architecture structure of counter_module
 
-# End time: 20:56:04 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 16:38:31 on Oct 28,2023, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 20:56:04 on Oct 17,2023
-
-# vcom -work work Waveform3.vwf.vht 
+# Start time: 16:38:31 on Oct 28,2023
+# vcom -work work Waveform7.vwf.vht 
 
 # -- Loading package STANDARD
 
@@ -136,12 +135,12 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # -- Compiling architecture counter_module_arch of counter_module_vhd_vec_tst
 
-# End time: 20:56:04 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 16:38:31 on Oct 28,2023, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.counter_module_vhd_vec_tst 
-# Start time: 20:56:04 on Oct 17,2023
+# Start time: 16:38:32 on Oct 28,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -159,23 +158,25 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 15939 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 
 # after#34
 
-# End time: 20:56:05 on Oct 17,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# End time: 16:38:32 on Oct 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/intelFPGA_lite/22.1std/projects/counter_module/Waveform3.vwf...
+Reading C:/intelFPGA_lite/22.1std/projects/counter_module/Waveform7.vwf...
 
 Reading C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/counter_module.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/counter_module_20231017205606.sim.vwf
+Writing the resulting VWF to C:/intelFPGA_lite/22.1std/projects/counter_module/simulation/qsim/counter_module_20231028163833.sim.vwf
 
 Finished VCD to VWF conversion.
 
