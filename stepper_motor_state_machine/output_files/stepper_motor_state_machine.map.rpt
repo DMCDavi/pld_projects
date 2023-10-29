@@ -1,5 +1,5 @@
 Analysis & Synthesis report for stepper_motor_state_machine
-Tue Oct 17 20:51:32 2023
+Sun Oct 29 13:29:34 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -44,13 +44,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 17 20:51:32 2023          ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 29 13:29:34 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; stepper_motor_state_machine                    ;
 ; Top-level Entity Name           ; stepper_motor_state_machine                    ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 5                                              ;
+; Total registers                 ; 32                                             ;
 ; Total pins                      ; 7                                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -174,43 +174,45 @@ https://fpgasoftware.intel.com/eula.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                   ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
 ; stepper_motor_state_machine.vhd  ; yes             ; User VHDL File  ; C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/stepper_motor_state_machine.vhd ;         ;
+; frequency_divider.vhd            ; yes             ; User VHDL File  ; C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/frequency_divider.vhd           ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 3     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 5     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 5     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 5     ;
-;                                             ;       ;
-; I/O pins                                    ; 7     ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; dir   ;
-; Maximum fan-out                             ; 5     ;
-; Total fan-out                               ; 38    ;
-; Average fan-out                             ; 1.58  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 22        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 38        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 5         ;
+;     -- 5 input functions                    ; 1         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 32        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 32        ;
+;                                             ;           ;
+; I/O pins                                    ; 7         ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 27        ;
+; Total fan-out                               ; 206       ;
+; Average fan-out                             ; 2.45      ;
++---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-----------------------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name                 ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-----------------------------+--------------+
-; |stepper_motor_state_machine ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 7    ; 0            ; |stepper_motor_state_machine ; stepper_motor_state_machine ; work         ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-----------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name                 ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-----------------------------+--------------+
+; |stepper_motor_state_machine ; 38 (5)              ; 32 (5)                    ; 0                 ; 0          ; 7    ; 0            ; |stepper_motor_state_machine                      ; stepper_motor_state_machine ; work         ;
+;    |frequency_divider:f1|    ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |stepper_motor_state_machine|frequency_divider:f1 ; frequency_divider           ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -232,8 +234,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -247,17 +249,23 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 5                           ;
+; arriav_ff             ; 32                          ;
 ;     CLR               ; 4                           ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
+;     SCLR              ; 26                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 39                          ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 26                          ;
+;     normal            ; 13                          ;
 ;         1 data inputs ; 2                           ;
+;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 4                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 5                           ;
 ; boundary_port         ; 7                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.79                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.38                        ;
 +-----------------------+-----------------------------+
 
 
@@ -276,25 +284,29 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 17 20:51:19 2023
+    Info: Processing started: Sun Oct 29 13:29:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off stepper_motor_state_machine -c stepper_motor_state_machine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file stepper_motor_state_machine.vhd
     Info (12022): Found design unit 1: stepper_motor_state_machine-behavioral File: C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/stepper_motor_state_machine.vhd Line: 16
     Info (12023): Found entity 1: stepper_motor_state_machine File: C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/stepper_motor_state_machine.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file frequency_divider.vhd
+    Info (12022): Found design unit 1: frequency_divider-behavior File: C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/frequency_divider.vhd Line: 11
+    Info (12023): Found entity 1: frequency_divider File: C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/frequency_divider.vhd Line: 4
 Info (12127): Elaborating entity "stepper_motor_state_machine" for the top level hierarchy
+Info (12128): Elaborating entity "frequency_divider" for hierarchy "frequency_divider:f1" File: C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/stepper_motor_state_machine.vhd Line: 81
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 5 logic cells
+    Info (21061): Implemented 38 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4897 megabytes
-    Info: Processing ended: Tue Oct 17 20:51:32 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4888 megabytes
+    Info: Processing ended: Sun Oct 29 13:29:34 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:15
 
 

@@ -1,7 +1,7 @@
 # do stepper_motor_state_machine.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:49:35 on Oct 17,2023
+# Start time: 21:27:28 on Oct 24,2023
 # vcom -work work stepper_motor_state_machine.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity stepper_motor_state_machine
 # -- Compiling architecture structure of stepper_motor_state_machine
-# End time: 20:49:35 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 21:27:28 on Oct 24,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:49:35 on Oct 17,2023
-# vcom -work work Waveform3.vwf.vht 
+# Start time: 21:27:28 on Oct 24,2023
+# vcom -work work Waveform4.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity stepper_motor_state_machine_vhd_vec_tst
 # -- Compiling architecture stepper_motor_state_machine_arch of stepper_motor_state_machine_vhd_vec_tst
-# End time: 20:49:35 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 21:27:28 on Oct 24,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.stepper_motor_state_machine_vhd_vec_tst 
-# Start time: 20:49:35 on Oct 17,2023
+# Start time: 21:27:28 on Oct 24,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -46,6 +46,8 @@
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 15021 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 # after#34
-# End time: 20:49:36 on Oct 17,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# End time: 21:27:28 on Oct 24,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

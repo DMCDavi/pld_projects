@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity stepper_motor_state_machine is
     Port ( clk     : in  STD_LOGIC;
            rst     : in  STD_LOGIC;
-           dir_btn : in  STD_LOGIC;  -- 0: horario, 1: anti-horario
+           dir_btn : in  STD_LOGIC;
            A       : out STD_LOGIC;
            B       : out STD_LOGIC;
            C       : out STD_LOGIC;
@@ -14,23 +14,29 @@ entity stepper_motor_state_machine is
 end stepper_motor_state_machine;
 
 architecture behavioral of stepper_motor_state_machine is
-type state_type is (sA, sB, sC, sD);
-signal current_state, next_state: state_type;
-signal dir: std_logic;
+	type state_type is (sA, sB, sC, sD);
+	signal current_state, next_state: state_type;
+	signal new_clk, dir: std_logic;
+	component frequency_divider is
+		port (
+        clk: IN STD_LOGIC;
+        div_out: OUT STD_LOGIC
+		);
+	end component;
 begin
 
-process(clk, rst)
+process(new_clk, rst)
 begin
-    if rst = '1' then
+    if rst = '0' then
         current_state <= sA;
-    elsif rising_edge(clk) then
+    elsif rising_edge(new_clk) then
         current_state <= next_state;
     end if;
 end process;
 
 process(dir_btn)
 begin
-    if rising_edge(dir_btn) then
+    if falling_edge(dir_btn) then
         dir <= not dir;
     end if;
 end process;
@@ -71,5 +77,10 @@ begin
             end if;
     end case;
 end process;
+
+f1: frequency_divider port map(
+	clk => clk,
+	div_out => new_clk
+);
 
 end behavioral;

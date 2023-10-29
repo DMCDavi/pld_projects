@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off stepper_motor_state_machine -c stepper_motor_state_machine --vector_source="C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/Waveform3.vwf" --testbench_file="C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/Waveform3.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off stepper_motor_state_machine -c stepper_motor_state_machine --vector_source="C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/Waveform4.vwf" --testbench_file="C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/Waveform4.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 17 20:49:31 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off stepper_motor_state_machine -c stepper_motor_state_machine --vector_source=C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/Waveform3.vwf --testbench_file=C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/Waveform3.vwf.vht
+    Info: Processing started: Tue Oct 24 21:27:26 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off stepper_motor_state_machine -c stepper_motor_state_machine --vector_source=C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/Waveform4.vwf --testbench_file=C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/Waveform4.vwf.vht
 Info (119006): Selected device 5CEBA4F23C7 for design "stepper_motor_state_machine"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -54,16 +54,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Oct 17 20:49:33 2023
+    Info: Processing started: Tue Oct 24 21:27:26 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/ stepper_motor_state_machine -c stepper_motor_state_machine
 Info (119006): Selected device 5CEBA4F23C7 for design "stepper_motor_state_machine"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file stepper_motor_state_machine.vho in folder "C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Tue Oct 17 20:49:34 2023
+    Info: Processing ended: Tue Oct 24 21:27:27 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 Completed successfully. 
 
@@ -89,7 +89,7 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 20:49:35 on Oct 17,2023
+# Start time: 21:27:28 on Oct 24,2023
 # vcom -work work stepper_motor_state_machine.vho 
 
 # -- Loading package STANDARD
@@ -109,22 +109,21 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package altera_lnsim_components
 
 # -- Loading package cyclonev_atom_pack
-
 # -- Loading package cyclonev_components
 
 # -- Compiling entity stepper_motor_state_machine
 
 # -- Compiling architecture structure of stepper_motor_state_machine
 
-# End time: 20:49:35 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 21:27:28 on Oct 24,2023, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 
-# Start time: 20:49:35 on Oct 17,2023
+# Start time: 21:27:28 on Oct 24,2023
 
-# vcom -work work Waveform3.vwf.vht 
+# vcom -work work Waveform4.vwf.vht 
 
 # -- Loading package STANDARD
 
@@ -136,12 +135,12 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # -- Compiling architecture stepper_motor_state_machine_arch of stepper_motor_state_machine_vhd_vec_tst
 
-# End time: 20:49:35 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 21:27:28 on Oct 24,2023, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.stepper_motor_state_machine_vhd_vec_tst 
-# Start time: 20:49:35 on Oct 17,2023
+# Start time: 21:27:28 on Oct 24,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -159,23 +158,25 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 15021 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 
 # after#34
 
-# End time: 20:49:36 on Oct 17,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# End time: 21:27:28 on Oct 24,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/Waveform3.vwf...
+Reading C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/Waveform4.vwf...
 
 Reading C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/stepper_motor_state_machine.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/stepper_motor_state_machine_20231017204936.sim.vwf
+Writing the resulting VWF to C:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim/stepper_motor_state_machine_20231024212728.sim.vwf
 
 Finished VCD to VWF conversion.
 

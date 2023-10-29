@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/22.1std/projects/stepper_motor_state_machine/simulation/qsim
 Estepper_motor_state_machine
-Z1 w1697586574
+Z1 w1698193647
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -24,13 +24,13 @@ Z11 8stepper_motor_state_machine.vho
 Z12 Fstepper_motor_state_machine.vho
 l0
 L39
-VgR=PzCj9K0P[P_:miNX2m2
-!s100 NZmY46Db[0ff``3@O[LP`2
+ViQIbV:EKSn1<;n:eBGf9]1
+!s100 i]SGJBVB9NZ7@VflVnegL1
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1697586575
+Z14 !s110 1698193648
 !i10b 1
-Z15 !s108 1697586575.000000
+Z15 !s108 1698193648.000000
 Z16 !s90 -work|work|stepper_motor_state_machine.vho|
 Z17 !s107 stepper_motor_state_machine.vho|
 !i113 1
@@ -46,11 +46,11 @@ R7
 R8
 R9
 R10
-DEx4 work 27 stepper_motor_state_machine 0 22 gR=PzCj9K0P[P_:miNX2m2
-l105
+DEx4 work 27 stepper_motor_state_machine 0 22 iQIbV:EKSn1<;n:eBGf9]1
+l158
 L51
-VU0ZmL=cADMBK?;H2P08A82
-!s100 aVC25HS6eXLB7lM_2:g>m1
+V]C16?JY@3YU8Ne1VZ2bFC3
+!s100 M<L`A@b^Y4Y<igN_TMV>N1
 R13
 32
 R14
@@ -62,12 +62,12 @@ R17
 R18
 R19
 Estepper_motor_state_machine_vhd_vec_tst
-Z20 w1697586572
+Z20 w1698193646
 R8
 R9
 R0
-Z21 8Waveform3.vwf.vht
-Z22 FWaveform3.vwf.vht
+Z21 8Waveform4.vwf.vht
+Z22 FWaveform4.vwf.vht
 l0
 L32
 VMzdh3HQQS2F]ODne:?Uld2
@@ -77,8 +77,8 @@ R13
 R14
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform3.vwf.vht|
-Z24 !s107 Waveform3.vwf.vht|
+Z23 !s90 -work|work|Waveform4.vwf.vht|
+Z24 !s107 Waveform4.vwf.vht|
 !i113 1
 R18
 R19
@@ -88,8 +88,8 @@ R9
 Z25 DEx4 work 39 stepper_motor_state_machine_vhd_vec_tst 0 22 Mzdh3HQQS2F]ODne:?Uld2
 l55
 L34
-V4RZ=oa7C7M5cTM142`bhW2
-!s100 1o:WA7BC;4]FWNRlW]6]L2
+VGL6j2gC_dTeXk<PP4TRG83
+!s100 3OmPN2:@D5Q35Aj;c7]WA1
 R13
 32
 R14

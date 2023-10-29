@@ -3,7 +3,7 @@ $comment
 		vcd file stepper_motor_state_machine.msim.vcd -direction
 $end
 $date
-	Tue Oct 17 20:49:36 2023
+	Tue Oct 24 21:27:28 2023
 $end
 $version
 	ModelSim Version 10.5b
@@ -43,49 +43,152 @@ $var wire 1 9 \B~output_o\ $end
 $var wire 1 : \C~output_o\ $end
 $var wire 1 ; \D~output_o\ $end
 $var wire 1 < \clk~input_o\ $end
-$var wire 1 = \dir_btn~input_o\ $end
-$var wire 1 > \dir~0_combout\ $end
-$var wire 1 ? \dir~q\ $end
-$var wire 1 @ \Selector0~0_combout\ $end
-$var wire 1 A \rst~input_o\ $end
-$var wire 1 B \current_state.sOff~q\ $end
-$var wire 1 C \next_state.sD_89~combout\ $end
-$var wire 1 D \current_state.sD~q\ $end
-$var wire 1 E \Selector1~0_combout\ $end
-$var wire 1 F \next_state.sC_97~combout\ $end
-$var wire 1 G \current_state.sC~q\ $end
-$var wire 1 H \Selector3~0_combout\ $end
-$var wire 1 I \next_state.sB_105~combout\ $end
-$var wire 1 J \current_state.sB~q\ $end
-$var wire 1 K \Selector5~0_combout\ $end
-$var wire 1 L \next_state.sA_113~combout\ $end
-$var wire 1 M \current_state.sA~q\ $end
-$var wire 1 N \ALT_INV_current_state.sB~q\ $end
-$var wire 1 O \ALT_INV_current_state.sC~q\ $end
-$var wire 1 P \ALT_INV_current_state.sD~q\ $end
-$var wire 1 Q \ALT_INV_Selector5~0_combout\ $end
-$var wire 1 R \ALT_INV_dir~q\ $end
-$var wire 1 S \ALT_INV_current_state.sOff~q\ $end
-$var wire 1 T \ALT_INV_Selector3~0_combout\ $end
-$var wire 1 U \ALT_INV_Selector1~0_combout\ $end
-$var wire 1 V \ALT_INV_Selector0~0_combout\ $end
-$var wire 1 W \ALT_INV_next_state.sA_113~combout\ $end
-$var wire 1 X \ALT_INV_next_state.sB_105~combout\ $end
-$var wire 1 Y \ALT_INV_next_state.sC_97~combout\ $end
-$var wire 1 Z \ALT_INV_next_state.sD_89~combout\ $end
-$var wire 1 [ \ALT_INV_rst~input_o\ $end
+$var wire 1 = \f1|Add0~57_sumout\ $end
+$var wire 1 > \f1|Equal0~1_combout\ $end
+$var wire 1 ? \f1|Equal0~2_combout\ $end
+$var wire 1 @ \f1|Equal0~3_combout\ $end
+$var wire 1 A \f1|Equal0~4_combout\ $end
+$var wire 1 B \f1|Equal0~5_combout\ $end
+$var wire 1 C \f1|Add0~58\ $end
+$var wire 1 D \f1|Add0~61_sumout\ $end
+$var wire 1 E \f1|Add0~62\ $end
+$var wire 1 F \f1|Add0~65_sumout\ $end
+$var wire 1 G \f1|Add0~66\ $end
+$var wire 1 H \f1|Add0~69_sumout\ $end
+$var wire 1 I \f1|Add0~70\ $end
+$var wire 1 J \f1|Add0~73_sumout\ $end
+$var wire 1 K \f1|Add0~74\ $end
+$var wire 1 L \f1|Add0~77_sumout\ $end
+$var wire 1 M \f1|Add0~78\ $end
+$var wire 1 N \f1|Add0~81_sumout\ $end
+$var wire 1 O \f1|Add0~82\ $end
+$var wire 1 P \f1|Add0~85_sumout\ $end
+$var wire 1 Q \f1|Add0~86\ $end
+$var wire 1 R \f1|Add0~89_sumout\ $end
+$var wire 1 S \f1|Add0~90\ $end
+$var wire 1 T \f1|Add0~93_sumout\ $end
+$var wire 1 U \f1|Add0~94\ $end
+$var wire 1 V \f1|Add0~97_sumout\ $end
+$var wire 1 W \f1|Add0~98\ $end
+$var wire 1 X \f1|Add0~101_sumout\ $end
+$var wire 1 Y \f1|Add0~102\ $end
+$var wire 1 Z \f1|Add0~33_sumout\ $end
+$var wire 1 [ \f1|Add0~34\ $end
+$var wire 1 \ \f1|Add0~37_sumout\ $end
+$var wire 1 ] \f1|Add0~38\ $end
+$var wire 1 ^ \f1|Add0~41_sumout\ $end
+$var wire 1 _ \f1|Add0~42\ $end
+$var wire 1 ` \f1|Add0~45_sumout\ $end
+$var wire 1 a \f1|Add0~46\ $end
+$var wire 1 b \f1|Add0~49_sumout\ $end
+$var wire 1 c \f1|Add0~50\ $end
+$var wire 1 d \f1|Add0~53_sumout\ $end
+$var wire 1 e \f1|Add0~54\ $end
+$var wire 1 f \f1|Add0~9_sumout\ $end
+$var wire 1 g \f1|Add0~10\ $end
+$var wire 1 h \f1|Add0~13_sumout\ $end
+$var wire 1 i \f1|Add0~14\ $end
+$var wire 1 j \f1|Add0~17_sumout\ $end
+$var wire 1 k \f1|Add0~18\ $end
+$var wire 1 l \f1|Add0~21_sumout\ $end
+$var wire 1 m \f1|Add0~22\ $end
+$var wire 1 n \f1|Add0~25_sumout\ $end
+$var wire 1 o \f1|Add0~26\ $end
+$var wire 1 p \f1|Add0~29_sumout\ $end
+$var wire 1 q \f1|Add0~30\ $end
+$var wire 1 r \f1|Add0~1_sumout\ $end
+$var wire 1 s \f1|Add0~2\ $end
+$var wire 1 t \f1|Add0~5_sumout\ $end
+$var wire 1 u \f1|Equal0~0_combout\ $end
+$var wire 1 v \f1|local_out~0_combout\ $end
+$var wire 1 w \f1|local_out~q\ $end
+$var wire 1 x \dir_btn~input_o\ $end
+$var wire 1 y \dir~0_combout\ $end
+$var wire 1 z \dir~q\ $end
+$var wire 1 { \Selector3~0_combout\ $end
+$var wire 1 | \rst~input_o\ $end
+$var wire 1 } \current_state.sD~q\ $end
+$var wire 1 ~ \Selector2~0_combout\ $end
+$var wire 1 !! \current_state.sC~q\ $end
+$var wire 1 "! \Selector1~0_combout\ $end
+$var wire 1 #! \current_state.sB~q\ $end
+$var wire 1 $! \Selector0~0_combout\ $end
+$var wire 1 %! \current_state.sA~q\ $end
+$var wire 1 &! \f1|iterations\ [25] $end
+$var wire 1 '! \f1|iterations\ [24] $end
+$var wire 1 (! \f1|iterations\ [23] $end
+$var wire 1 )! \f1|iterations\ [22] $end
+$var wire 1 *! \f1|iterations\ [21] $end
+$var wire 1 +! \f1|iterations\ [20] $end
+$var wire 1 ,! \f1|iterations\ [19] $end
+$var wire 1 -! \f1|iterations\ [18] $end
+$var wire 1 .! \f1|iterations\ [17] $end
+$var wire 1 /! \f1|iterations\ [16] $end
+$var wire 1 0! \f1|iterations\ [15] $end
+$var wire 1 1! \f1|iterations\ [14] $end
+$var wire 1 2! \f1|iterations\ [13] $end
+$var wire 1 3! \f1|iterations\ [12] $end
+$var wire 1 4! \f1|iterations\ [11] $end
+$var wire 1 5! \f1|iterations\ [10] $end
+$var wire 1 6! \f1|iterations\ [9] $end
+$var wire 1 7! \f1|iterations\ [8] $end
+$var wire 1 8! \f1|iterations\ [7] $end
+$var wire 1 9! \f1|iterations\ [6] $end
+$var wire 1 :! \f1|iterations\ [5] $end
+$var wire 1 ;! \f1|iterations\ [4] $end
+$var wire 1 <! \f1|iterations\ [3] $end
+$var wire 1 =! \f1|iterations\ [2] $end
+$var wire 1 >! \f1|iterations\ [1] $end
+$var wire 1 ?! \f1|iterations\ [0] $end
+$var wire 1 @! \f1|ALT_INV_Equal0~4_combout\ $end
+$var wire 1 A! \f1|ALT_INV_Equal0~3_combout\ $end
+$var wire 1 B! \f1|ALT_INV_Equal0~2_combout\ $end
+$var wire 1 C! \f1|ALT_INV_Equal0~1_combout\ $end
+$var wire 1 D! \f1|ALT_INV_Equal0~0_combout\ $end
+$var wire 1 E! \f1|ALT_INV_local_out~q\ $end
+$var wire 1 F! \ALT_INV_dir~q\ $end
+$var wire 1 G! \ALT_INV_current_state.sD~q\ $end
+$var wire 1 H! \ALT_INV_current_state.sC~q\ $end
+$var wire 1 I! \ALT_INV_current_state.sB~q\ $end
+$var wire 1 J! \ALT_INV_current_state.sA~q\ $end
+$var wire 1 K! \f1|ALT_INV_iterations\ [25] $end
+$var wire 1 L! \f1|ALT_INV_iterations\ [24] $end
+$var wire 1 M! \f1|ALT_INV_iterations\ [23] $end
+$var wire 1 N! \f1|ALT_INV_iterations\ [22] $end
+$var wire 1 O! \f1|ALT_INV_iterations\ [21] $end
+$var wire 1 P! \f1|ALT_INV_iterations\ [20] $end
+$var wire 1 Q! \f1|ALT_INV_iterations\ [19] $end
+$var wire 1 R! \f1|ALT_INV_iterations\ [18] $end
+$var wire 1 S! \f1|ALT_INV_iterations\ [17] $end
+$var wire 1 T! \f1|ALT_INV_iterations\ [16] $end
+$var wire 1 U! \f1|ALT_INV_iterations\ [15] $end
+$var wire 1 V! \f1|ALT_INV_iterations\ [14] $end
+$var wire 1 W! \f1|ALT_INV_iterations\ [13] $end
+$var wire 1 X! \f1|ALT_INV_iterations\ [12] $end
+$var wire 1 Y! \f1|ALT_INV_iterations\ [11] $end
+$var wire 1 Z! \f1|ALT_INV_iterations\ [10] $end
+$var wire 1 [! \f1|ALT_INV_iterations\ [9] $end
+$var wire 1 \! \f1|ALT_INV_iterations\ [8] $end
+$var wire 1 ]! \f1|ALT_INV_iterations\ [7] $end
+$var wire 1 ^! \f1|ALT_INV_iterations\ [6] $end
+$var wire 1 _! \f1|ALT_INV_iterations\ [5] $end
+$var wire 1 `! \f1|ALT_INV_iterations\ [4] $end
+$var wire 1 a! \f1|ALT_INV_iterations\ [3] $end
+$var wire 1 b! \f1|ALT_INV_iterations\ [2] $end
+$var wire 1 c! \f1|ALT_INV_iterations\ [1] $end
+$var wire 1 d! \f1|ALT_INV_iterations\ [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 0!
-0"
-0#
+1"
+1#
 0$
-0%
-0&
-0'
+1%
+1&
+1'
 0(
 1)
 x*
@@ -96,98 +199,161 @@ x*
 1/
 10
 01
-02
-03
+12
+13
 04
-05
-06
-07
+15
+16
+17
 08
-09
-0:
-0;
+19
+1:
+1;
 0<
-0=
+1=
 1>
-0?
+1?
 0@
-0A
+1A
 0B
-xC
+0C
 0D
-1E
-xF
+0E
+0F
 0G
 0H
-xI
+0I
 0J
-1K
-xL
+0K
+0L
 0M
-1N
-1O
-1P
+0N
+0O
+0P
 0Q
-1R
-1S
-1T
+0R
+0S
+0T
 0U
-1V
-xW
-xX
-xY
-xZ
-1[
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+1u
+0v
+0w
+1x
+1y
+0z
+1{
+1|
+0}
+0~
+0!!
+0"!
+0#!
+1$!
+0%!
+0@!
+1A!
+0B!
+0C!
+0D!
+1E!
+1F!
+1G!
+1H!
+1I!
+1J!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+1K!
+1L!
+1M!
+1N!
+1O!
+1P!
+1Q!
+1R!
+1S!
+1T!
+1U!
+1V!
+1W!
+1X!
+1Y!
+1Z!
+1[!
+1\!
+1]!
+1^!
+1_!
+1`!
+1a!
+1b!
+1c!
+1d!
 $end
 #5000
 1$
 11
 1<
-1B
-xD
-xG
-xJ
-xM
-xN
-xO
-xP
-0S
-0C
-0F
-1I
-0L
-x@
-xE
-xH
-xK
-xQ
-xT
-xU
-xV
-1W
-0X
-1Y
-1Z
-x8
-x9
-x:
-x;
-xC
-xF
-xI
-xL
-x4
-x5
-x6
-x7
-xW
-xX
-xY
-xZ
-x!
-x"
-x#
-x%
+1?!
+0d!
+0=
+1C
+1D
 #10000
 0$
 01
@@ -196,6 +362,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #20000
 0$
 01
@@ -204,6 +382,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #30000
 0$
 01
@@ -212,6 +397,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #40000
 0$
 01
@@ -220,6 +426,28 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+1}
+1%!
+0@
+0F
+0v
+0J!
+0G!
+1A!
+1~
+0{
+0B
+1v
+18
+0;
+14
+07
+1!
+0%
 #50000
 0$
 01
@@ -228,6 +456,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #60000
 0$
 01
@@ -236,6 +469,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #70000
 0$
 01
@@ -244,6 +489,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #80000
 0$
 01
@@ -252,6 +504,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #90000
 0$
 01
@@ -260,6 +533,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #100000
 0$
 01
@@ -268,6 +551,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #110000
 0$
 01
@@ -276,6 +564,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #120000
 0$
 01
@@ -284,6 +584,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #130000
 0$
 01
@@ -292,6 +599,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #140000
 0$
 01
@@ -300,6 +628,28 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+0}
+1!!
+0@
+0F
+0v
+0H!
+1G!
+1A!
+0~
+1"!
+0B
+1v
+1;
+0:
+17
+06
+1%
+0#
 #150000
 0$
 01
@@ -308,6 +658,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #160000
 0$
 01
@@ -316,6 +671,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #170000
 0$
 01
@@ -324,20 +691,42 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #180000
 0$
-1&
 01
-13
-1=
 0<
-1?
-0R
-0>
 #185000
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #190000
 0$
 01
@@ -346,6 +735,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #200000
 0$
 01
@@ -354,6 +753,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #210000
 0$
 01
@@ -362,6 +766,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #220000
 0$
 01
@@ -370,6 +786,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #230000
 0$
 01
@@ -378,6 +801,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #240000
 0$
 01
@@ -386,6 +830,28 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+0!!
+1#!
+0@
+0F
+0v
+0I!
+1H!
+1A!
+0"!
+0$!
+0B
+1v
+1:
+09
+16
+05
+1#
+0"
 #250000
 0$
 01
@@ -394,6 +860,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #260000
 0$
 01
@@ -402,6 +873,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #270000
 0$
 01
@@ -410,6 +893,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #280000
 0$
 01
@@ -418,6 +908,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #290000
 0$
 01
@@ -426,6 +937,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #300000
 0$
 01
@@ -434,6 +955,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #310000
 0$
 01
@@ -442,6 +968,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #320000
 0$
 01
@@ -450,6 +988,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #330000
 0$
 01
@@ -458,17 +1003,57 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #340000
 0$
-0&
 01
-03
-0=
 0<
 #345000
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+0#!
+0%!
+0@
+0F
+0v
+1J!
+1I!
+1A!
+1$!
+1{
+0B
+1v
+08
+19
+04
+15
+0!
+1"
 #350000
 0$
 01
@@ -477,6 +1062,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #360000
 0$
 01
@@ -485,6 +1075,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #370000
 0$
 01
@@ -493,6 +1095,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #380000
 0$
 01
@@ -501,6 +1110,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #390000
 0$
 01
@@ -509,6 +1139,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #400000
 0$
 01
@@ -517,6 +1157,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #410000
 0$
 01
@@ -525,6 +1170,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #420000
 0$
 01
@@ -533,6 +1190,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #430000
 0$
 01
@@ -541,6 +1205,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #440000
 0$
 01
@@ -549,47 +1234,41 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+1}
+1%!
+0@
+0F
+0v
+0J!
+0G!
+1A!
+1~
+0{
+0B
+1v
+18
+0;
+14
+07
+1!
+0%
 #450000
 0$
-1'
 01
-12
-1A
 0<
-0[
-0B
-0D
-0G
-0J
-0M
-1N
-1O
-1P
-1S
-1@
-1E
-1H
-1K
-0Q
-0T
-0U
-0V
-08
-09
-0:
-0;
-04
-05
-06
-07
-0!
-0"
-0#
-0%
 #455000
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #460000
 0$
 01
@@ -598,6 +1277,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #470000
 0$
 01
@@ -606,6 +1297,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #480000
 0$
 01
@@ -614,6 +1312,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #490000
 0$
 01
@@ -622,6 +1341,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #500000
 0$
 01
@@ -630,6 +1359,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #510000
 0$
 01
@@ -638,6 +1372,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #520000
 0$
 01
@@ -646,6 +1392,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #530000
 0$
 01
@@ -654,6 +1407,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #540000
 0$
 01
@@ -662,6 +1436,28 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+0}
+1!!
+0@
+0F
+0v
+0H!
+1G!
+1A!
+0~
+1"!
+0B
+1v
+1;
+0:
+17
+06
+1%
+0#
 #550000
 0$
 01
@@ -670,6 +1466,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #560000
 0$
 01
@@ -678,63 +1479,33 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #570000
 0$
-0'
 01
-02
-0A
 0<
-1[
 #575000
 1$
 11
 1<
-1B
-xD
-xG
-xJ
-xM
-xN
-xO
-xP
-0S
+1?!
+0d!
+0=
 1C
-0F
-0I
-0L
-x@
-xE
-xH
-xK
-xQ
-xT
-xU
-xV
-1W
-1X
-1Y
-0Z
-x8
-x9
-x:
-x;
-xC
-xF
-xI
-xL
-x4
-x5
-x6
-x7
-xW
-xX
-xY
-xZ
-x!
-x"
-x#
-x%
+0D
+1E
+1F
 #580000
 0$
 01
@@ -743,6 +1514,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #590000
 0$
 01
@@ -751,6 +1543,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #600000
 0$
 01
@@ -759,6 +1561,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #610000
 0$
 01
@@ -767,6 +1574,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #620000
 0$
 01
@@ -775,6 +1594,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #630000
 0$
 01
@@ -783,6 +1609,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #640000
 0$
 01
@@ -791,20 +1638,41 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+0!!
+1#!
+0@
+0F
+0v
+0I!
+1H!
+1A!
+0"!
+0$!
+0B
+1v
+1:
+09
+16
+05
+1#
+0"
 #650000
 0$
-1&
 01
-13
-1=
 0<
-0?
-1R
-1>
 #655000
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #660000
 0$
 01
@@ -813,6 +1681,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #670000
 0$
 01
@@ -821,6 +1701,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #680000
 0$
 01
@@ -829,6 +1716,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #690000
 0$
 01
@@ -837,6 +1745,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #700000
 0$
 01
@@ -845,6 +1763,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #710000
 0$
 01
@@ -853,6 +1776,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #720000
 0$
 01
@@ -861,6 +1796,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #730000
 0$
 01
@@ -869,6 +1811,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #740000
 0$
 01
@@ -877,6 +1840,28 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+0#!
+0%!
+0@
+0F
+0v
+1J!
+1I!
+1A!
+1$!
+1{
+0B
+1v
+08
+19
+04
+15
+0!
+1"
 #750000
 0$
 01
@@ -885,6 +1870,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #760000
 0$
 01
@@ -893,6 +1883,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #770000
 0$
 01
@@ -901,6 +1903,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #780000
 0$
 01
@@ -909,6 +1918,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #790000
 0$
 01
@@ -917,6 +1947,16 @@ x%
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #800000
 0$
 01
@@ -925,6 +1965,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #810000
 0$
 01
@@ -933,6 +1978,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #820000
 0$
 01
@@ -941,6 +1998,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #830000
 0$
 01
@@ -949,6 +2013,27 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #840000
 0$
 01
@@ -957,6 +2042,28 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+1}
+1%!
+0@
+0F
+0v
+0J!
+0G!
+1A!
+1~
+0{
+0B
+1v
+18
+0;
+14
+07
+1!
+0%
 #850000
 0$
 01
@@ -965,6 +2072,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #860000
 0$
 01
@@ -973,6 +2085,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #870000
 0$
 01
@@ -981,6 +2105,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #880000
 0$
 01
@@ -989,47 +2120,45 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #890000
 0$
-1'
 01
-12
-1A
 0<
-0[
-0B
-0D
-0G
-0J
-0M
-1N
-1O
-1P
-1S
-0@
-1E
-0H
-1K
-0Q
-1T
-0U
-1V
-08
-09
-0:
-0;
-04
-05
-06
-07
-0!
-0"
-0#
-0%
 #895000
 1$
 11
 1<
+0=!
+0w
+1E!
+1b!
+0@
+0F
+1v
+1A!
+0B
+0v
 #900000
 0$
 01
@@ -1038,6 +2167,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #910000
 0$
 01
@@ -1046,6 +2180,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #920000
 0$
 01
@@ -1054,17 +2200,42 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #930000
 0$
-0&
 01
-03
-0=
 0<
 #935000
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+1v
+0H
 #940000
 0$
 01
@@ -1073,6 +2244,28 @@ x%
 1$
 11
 1<
+0=!
+1w
+0E!
+1b!
+0}
+1!!
+0@
+0F
+0v
+0H!
+1G!
+1A!
+0~
+1"!
+0B
+1v
+1;
+0:
+17
+06
+1%
+0#
 #950000
 0$
 01
@@ -1081,6 +2274,11 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+1D
 #960000
 0$
 01
@@ -1089,6 +2287,18 @@ x%
 1$
 11
 1<
+0?!
+1>!
+0c!
+1d!
+1=
+0C
+0D
+1E
+1F
+1D
+0E
+0F
 #970000
 0$
 01
@@ -1097,6 +2307,13 @@ x%
 1$
 11
 1<
+1?!
+0d!
+0=
+1C
+0D
+1E
+1F
 #980000
 0$
 01
@@ -1105,61 +2322,43 @@ x%
 1$
 11
 1<
+0?!
+0>!
+1=!
+0b!
+1c!
+1d!
+1=
+0C
+1D
+0E
+1@
+0F
+1G
+0A!
+1H
+1F
+0G
+0D
+1B
+0v
+0H
 #990000
 0$
-0'
 01
-02
-0A
 0<
-1[
 #995000
 1$
 11
 1<
-1B
-xD
-xG
-xJ
-xM
-xN
-xO
-xP
-0S
-0C
+0=!
+0w
+1E!
+1b!
+0@
 0F
-1I
-0L
-x@
-xE
-xH
-xK
-xQ
-xT
-xU
-xV
-1W
-0X
-1Y
-1Z
-x8
-x9
-x:
-x;
-xC
-xF
-xI
-xL
-x4
-x5
-x6
-x7
-xW
-xX
-xY
-xZ
-x!
-x"
-x#
-x%
+1v
+1A!
+0B
+0v
 #1000000

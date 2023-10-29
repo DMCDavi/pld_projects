@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Oct 17 20:51:32 2023
+Analysis & Synthesis Status : Successful - Sun Oct 29 13:29:34 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : stepper_motor_state_machine
 Top-level Entity Name : stepper_motor_state_machine
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 5
+Total registers : 32
 Total pins : 7
 Total virtual pins : 0
 Total block memory bits : 0
